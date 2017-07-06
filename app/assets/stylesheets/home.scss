@@ -1,0 +1,34 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main-container{
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  .head-title{
+    width: 100%;
+    margin-bottom: 100px;
+  }
+  .card-view{
+    margin-bottom: 50px;
+    padding: 20px 10px 10px 10px;
+    background-color: #eef1e3;
+
+    .form-container{
+      #url_bank_actual_url, #short_url{
+        width: 500px;
+        height: 30px;
+      }
+    }
+    .result{
+      margin-top: 50px;
+      font-size: larger;
+      .url{      
+        font-size: larger;
+        font-weight: bold;
+      }
+    }
+  }
+}

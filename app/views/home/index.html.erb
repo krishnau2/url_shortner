@@ -1,0 +1,31 @@
+<div class="card-view">
+  <div class="form-container">
+    <%= form_for @url_bank, url: {action: "create"} do |f| %>
+      <%= label_tag(:actual_url, "Paste a link to shorten it: ") %>
+      <%= f.text_field :actual_url %>
+      <%= f.submit "Convert" %>
+    <% end %>
+  </div>
+
+  <% if @short_url && !@short_url.blank? %>
+    <div class="result">
+      Short Url: <span class="url"><%= @short_url.short_url %></span>
+    </div>
+  <% end %>
+</div>
+
+<div class="card-view">
+  <div class="form-container">
+    <%= form_tag("/search", method: "get") do %>
+      <%= label_tag(:short_url, "Paste a short url: ") %>
+      <%= text_field_tag :short_url %>
+      <%= submit_tag "Search" %>
+    <% end %>
+  </div>
+
+  <% if @actual_url && !@actual_url.blank? %>
+    <div class="result">
+      Short Url: <span class="url"><%= @actual_url %></span>
+    </div>
+  <% end %>
+</div>
